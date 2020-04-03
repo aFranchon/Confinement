@@ -36,8 +36,8 @@ public class WorkerBehaviour : MonoBehaviour
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
-        workerRenderer = GetComponent<Renderer>();
-        workerChildRenderer = GetComponentsInChildren<Renderer>();
+        //workerRenderer = GetComponent<Renderer>();
+        //workerChildRenderer = GetComponentsInChildren<Renderer>();
         nearestWalker = null;
     }
 

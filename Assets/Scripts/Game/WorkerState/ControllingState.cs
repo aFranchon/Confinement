@@ -13,12 +13,14 @@ public class ControllingState : WorkerBaseStat
     public override void EnterState(WorkerBehaviour worker)
     {
         worker.agent.SetDestination(worker.transform.position);
-        worker.workerRenderer.material = material;
+        
+        //old code to change color, not up to date with the new assets
+        /*worker.workerRenderer.material = material;
 
         foreach (var elem in worker.workerChildRenderer)
         {
             elem.material = material;
-        }
+        }*/
     }
 
     public override void OnCollisionEnter(WorkerBehaviour worker, Collision collision)

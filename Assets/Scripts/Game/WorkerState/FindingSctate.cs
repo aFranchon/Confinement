@@ -12,12 +12,13 @@ public class FindingState : WorkerBaseStat
 
     public override void EnterState(WorkerBehaviour worker)
     {
-        worker.workerRenderer.material = material;
+        //old code to change color, not up to date with the new assets
+        /*worker.workerRenderer.material = material;
 
         foreach (var elem in worker.workerChildRenderer)
         {
             elem.material = material;
-        }
+        }*/
     }
 
     public override void OnCollisionEnter(WorkerBehaviour worker, Collision collision)
@@ -41,8 +42,7 @@ public class FindingState : WorkerBaseStat
             directionToNearest = worker.nearestWalker.transform.position - worker.transform.position;
             distanceToNearest = directionToNearest.magnitude;
         }
-
-
+        
         //if player is near enough
         if (distanceToNearest <= worker.aggroRange)
         {
@@ -53,7 +53,6 @@ public class FindingState : WorkerBaseStat
         else if (worker.agent.velocity.magnitude == 0)
         {
             worker.agent.speed = 20;
-            //change destination TODO randomize
             var pos = new Vector3(Random.Range(-50, 50), 0, -Random.Range(-50, 50));
             worker.agent.SetDestination(pos);
         }

@@ -14,12 +14,14 @@ public class ControlledState : WalkerBaseState
     {
         walker.gameObject.tag = "Untagged";
         walker.agent.SetDestination(walker.transform.position);
-        walker.workerRenderer.material = material;
+        
+        //old code to change color, not up to date with the new assets
+        /*walker.workerRenderer.material = material;
 
         foreach (var elem in walker.workerChildRenderer)
         {
             elem.material = material;
-        }
+        }*/
     }
 
     public override void OnCollisionEnter(WalkerBehaviour walker)

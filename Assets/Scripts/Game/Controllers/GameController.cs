@@ -44,7 +44,7 @@ public class GameController : MonoBehaviour
 
         //worker number
         workerNumberText.text = workerNumber.ToString();
-        costWalkerSpawnRateText.text = costWalkerSpawnRate.ToString();
+        costWorkerText.text = costWorker.ToString();
 
         //walker spawn rate
         walkerSpawnRateLevelText.text = walkerSpawnRateLevel.ToString();

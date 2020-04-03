@@ -13,12 +13,14 @@ public class WalkingState : WalkerBaseState
     public override void EnterState(WalkerBehaviour walker)
     {
         walker.gameObject.tag = "Walker";
-        walker.workerRenderer.material = material;
+
+        //old code to change color, not up to date with the new assets
+        /*walker.workerRenderer.material = material;
 
         foreach (var elem in walker.workerChildRenderer)
         {
             elem.material = material;
-        }
+        }*/
     }
 
     public override void OnCollisionEnter(WalkerBehaviour walker)
