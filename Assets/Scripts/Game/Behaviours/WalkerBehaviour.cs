@@ -58,7 +58,12 @@ public class WalkerBehaviour : MonoBehaviour
         controlledByWorker?.Invoke();
 
         //TODO i want to change this, but don't know how
-        Destroy(gameObject, 1.5f);
+        Invoke("RecycleGameObject", 1.5f);
+    }
+
+    private void RecycleGameObject()
+    {
+        gameObject.SetActive(false);
     }
     #endregion
 

@@ -2207,6 +2207,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 336439150}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &349592741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 349592742}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &349592742
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349592741}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.5386581, y: -0.8814392, z: -0.5728339}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &365264166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4367,6 +4397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkerPrefab: {fileID: 1415556995387802, guid: 18ff8a7a7ca91ff4bab92d116fa797c8,
     type: 3}
+  walkerPool: {fileID: 1703131953}
 --- !u!4 &726933341
 Transform:
   m_ObjectHideFlags: 0
@@ -4377,7 +4408,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.6713448, y: -9.451847, z: -1.4527725}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1703131952}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5113,7 +5145,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.045, y: 0.42700002}
   m_AnchorMax: {x: 0.39800003, y: 0.60065126}
-  m_AnchoredPosition: {x: 0.24903107, y: 0.5}
+  m_AnchoredPosition: {x: 0.24902344, y: 0.5}
   m_SizeDelta: {x: -0.4979999, y: -0.040000916}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &948981521
@@ -5672,7 +5704,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.045, y: 0.42700002}
   m_AnchorMax: {x: 0.39800003, y: 0.60065126}
-  m_AnchoredPosition: {x: 0.24903107, y: 0.5}
+  m_AnchoredPosition: {x: 0.24902344, y: 0.5}
   m_SizeDelta: {x: -0.4979999, y: -0.040000916}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1000311623
@@ -9114,6 +9146,53 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1681726687}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1703131951
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1703131952}
+  - component: {fileID: 1703131953}
+  m_Layer: 0
+  m_Name: WalkerPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1703131952
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703131951}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 726933341}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1703131953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703131951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d6655eaa3a008846a5d50ea9a33b31b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolContainer: {fileID: 1703131952}
+  populationPrefab: {fileID: 1415556995387802, guid: 18ff8a7a7ca91ff4bab92d116fa797c8,
+    type: 3}
+  basePopulation: 5
 --- !u!1001 &1706188263
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11055,7 +11134,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.045, y: 0.08669754}
   m_AnchorMax: {x: 0.39800003, y: 0.26065123}
-  m_AnchoredPosition: {x: 0.013000488, y: 0.049995422}
+  m_AnchoredPosition: {x: 0.013000488, y: 0.05000305}
   m_SizeDelta: {x: -0.9700012, y: -0.040000916}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2024543178

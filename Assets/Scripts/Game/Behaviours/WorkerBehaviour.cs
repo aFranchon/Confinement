@@ -58,6 +58,11 @@ public class WorkerBehaviour : MonoBehaviour
     void Update()
     {
         //find the nearest walker of the scene
+        if (lastCollision && !lastCollision.gameObject.activeInHierarchy)
+        {
+            Debug.Log("Sould not print more than once in a while");
+            lastCollision = null;
+        }
         currentState.Update(this);
     }
 

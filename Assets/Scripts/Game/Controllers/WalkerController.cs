@@ -9,7 +9,8 @@ public class WalkerController : MonoBehaviour
     #endregion
 
     #region Fields
-    public GameObject walkerPrefab;
+    [SerializeField] private GameObject walkerPrefab;
+    [SerializeField] private GameObjectPool walkerPool;
     private GameController gameController;
 
     private float walkerSpawnRate = 10f;
@@ -34,12 +35,13 @@ public class WalkerController : MonoBehaviour
     {
         var pos = new Vector3(UnityEngine.Random.Range(-50, 50), 0, -UnityEngine.Random.Range(-50, 50));
         //create walker
-        var newWalker = Instantiate(walkerPrefab, pos, walkerPrefab.transform.rotation);
+        var newWalker = walkerPool.RequestPool();
+        newWalker.SetActive(true);
+        newWalker.transform.position = pos;
 
         //more settings here
         newWalker.GetComponent<WalkerBehaviour>().controlledByWorker += eventControlledWalker;
-
-        Debug.Log("Waiting for " + walkerSpawnRate + "seconds");
+        
         yield return new WaitForSeconds(walkerSpawnRate);
 
         StartCoroutine("spawnEnemies");

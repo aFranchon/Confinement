@@ -71,12 +71,20 @@
      <Compile Include="Assets\Scripts\Game\WorkerState\FindingSctate.cs" />
      <Compile Include="Assets\Scripts\Game\WorkerState\WorkerBaseState.cs" />
      <Compile Include="Assets\Scripts\MainMenu\MainMenuButtonManager.cs" />
+     <Compile Include="Assets\Scripts\Utils\GameObjectPool.cs" />
+     <Compile Include="Assets\Scripts\Utils\Singleton.cs" />
      <None Include="Assets\PolygonBattleRoyale\Shader\DamageZone.shader" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/3032f/Bidouilles/Confinement/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.ProGrids">
+ <HintPath>C:/Users/3032f/Bidouilles/Confinement/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>C:/Users/3032f/Bidouilles/Confinement/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ProGrids.Editor">
+ <HintPath>C:/Users/3032f/Bidouilles/Confinement/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/3032f/Bidouilles/Confinement/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -98,12 +106,6 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Users/3032f/Bidouilles/Confinement/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ProGrids">
- <HintPath>C:/Users/3032f/Bidouilles/Confinement/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ProGrids.Editor">
- <HintPath>C:/Users/3032f/Bidouilles/Confinement/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
